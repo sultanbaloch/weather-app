@@ -1,0 +1,99 @@
+
+
+
+
+body {
+    background-image: url(./3.gif);
+    /* background-color: black; */
+    background-size: cover;
+}
+
+.container {
+    /* background-image: url('./123.gif'); */
+    position: relative;
+   
+    
+    border-image-width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #1D2D50; */
+    color: white;
+    position: fixed;
+    width: fit-content   
+    ;
+    min-height : fit-content;
+    left: 40%;
+    top: 20%;
+    
+    /* background: rgba(51,51,51,0.7); */
+    z-index: 10;
+}
+
+input {
+    /* width: 40px; */
+    height: 20px;
+margin-left: 20px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.61);
+    flex-direction: column;
+    color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    
+}
+
+.main {
+    font-family: 'Courier New';
+    color: white;
+    
+    border-radius: 40px;
+    box-shadow: 2px 1px 3px 2px white;
+    background-color: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(5px);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    display: inline-block;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* .btn {
+    width: 30px;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+} */
+
+.result {
+    width: 200px;
+    /* background-color: #1E5F74; */
+    margin-top: 10px;
+    border-radius: 40px;
+    box-shadow: 2px 1px 3px 2px whitesmoke;
+    padding: 20px;
+    
+    /* background-color: rgba(92, 88, 88, 0.61); */
+    backdrop-filter: blur(5px);
+}
+
+button {
+    width: px;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}

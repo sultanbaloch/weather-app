@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="./style.css">
+
+    <div class="container">
+        <div class="main">
+            <h2 style="text-align: center;">Weather App</h2>
+            <br> <input id="cityName" type="text" placeholder="Enter City Name">
+
+
+            <button onclick="getWeather()" class="btn">Check</button>
+            <div class="result">
+                <p id="result"></p>
+                <p id="result2"></p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        function getWeather() {
+
+            const cityName = document.getElementById("cityName").value
+
+
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=3875ceb65fecc206428bf8a59830259a&units=metric`)
+
+                .then(function (response) {
+                    console.log(response);
+                    console.log(response.data.main.temp);
+
+                    let a = `Current Weather Temperature of ${cityName} is ${response.data.main.temp} C°`
+
+                    document.getElementById("result").innerText += a
+
+
+                })
+
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=363a0329911c1b074081245aae1023c3&units=metric`)
+
+                .then(function (response) {
+                    console.log(response);
+                    console.log(response.data.main.temp);
+
+                    let b = `Current Weather Humidity of ${cityName} is ${response.data.main.humidity} %`
+
+
+                    document.getElementById("result2").innerText += b
+
+
+                })
+
+        }
+    </script>
+
+</body>
+
+</html>
